@@ -15,16 +15,17 @@ class Aluno:
         idade = hoje.year - data_nasc.year - ((hoje.month, hoje.day) < (data_nasc.month, data_nasc.day))
         return idade
 
-
-    def lista(self):
+    @staticmethod
+    def lista():
         return ["matematica", "historia", "portugues", "geografia", "ingles"]
 
     def imprimir_info(self):
         print(f"Nome: {self.nome}")
         print(f"Matricula: {self.matricula}")
         print(f"Disciplinas: {', '.join(self.disciplinas)}")
-         print(f"Idade: {self.idade}")
+        print(f"Idade: {self.idade}")
 
 
-A1 = Aluno("Matheus", "1/1/2000", "2002", (lista)
+
+A1 = Aluno("Matheus", "1/1/2000", "2002", Aluno.lista())
 A1.imprimir_info()
